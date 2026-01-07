@@ -11,7 +11,7 @@ body {
 .banner {
   position: relative;
   width: 100%;
-  max-height: 400px; /* ajusta si quieres */
+  max-height: 400px;
   overflow: hidden;
 }
 
