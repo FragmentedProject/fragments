@@ -2,12 +2,14 @@
   width: 180px;
   height: auto;
 }
+
 body {
   background-color: #000;
   color: #fff;
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
 .banner {
   position: relative;
   width: 100%;
@@ -15,24 +17,16 @@ body {
   overflow: hidden;
 }
 
-.banner img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  opacity: 0.65;
-  display: block;
-}
-
-.banner-content {
+/* oscurecido general */
+.banner::before {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 2;
-  color: white;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
+/* degradado inferior */
 .banner::after {
   content: "";
   position: absolute;
@@ -45,5 +39,24 @@ body {
     rgba(0, 0, 0, 1),
     rgba(0, 0, 0, 0)
   );
+  z-index: 2;
+}
+
+.banner img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
   z-index: 3;
 }
