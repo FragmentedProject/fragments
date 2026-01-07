@@ -2,3 +2,9 @@
   width: 180px;
   height: auto;
 }
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
